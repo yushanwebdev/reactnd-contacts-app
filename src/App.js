@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import ContactList from './ContactList';
 
 class App extends Component {
-  render() {
-    const contacts = [
+  state = {
+    contacts: [
       {
         "id": "karen",
         "name": "Karen Isgrigg",
@@ -23,11 +23,13 @@ class App extends Component {
         "handle": "tylermcginnis",
         "avatarURL": "http://localhost:5001/tyler.jpg"
       }
-    ];
+    ]
+  }
 
+  render() {
     return (
       <div>
-        <ContactList contacts={contacts} />
+        <ContactList contacts={this.state.contacts} />
       </div>
     );
   }
