@@ -9,19 +9,19 @@ class App extends Component {
         "id": "karen",
         "name": "Karen Isgrigg",
         "handle": "karen_isgrigg",
-        "avatarURL": "http://localhost:5001/karen.jpg"
+        "avatarURL": "./img/karen.jpg"
       },
       {
         "id": "richard",
         "name": "Richard Kalehoff",
         "handle": "richardkalehoff",
-        "avatarURL": "http://localhost:5001/richard.jpg"
+        "avatarURL": "./img/richard.jpg"
       },
       {
         "id": "tyler",
         "name": "Tyler McGinnis",
         "handle": "tylermcginnis",
-        "avatarURL": "http://localhost:5001/tyler.jpg"
+        "avatarURL": "./img/tyler.jpg"
       }
     ]
   }
