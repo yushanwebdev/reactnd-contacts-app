@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class ContactList extends Component {
+    static propTypes = {
+        contacts: PropTypes.array.isRequired,
+        onDeleteContact: PropTypes.func.isRequired
+    }
+
     render() {
         return (
             <ol className='contact-list'>
                 {
-                    props.contacts.map((contact) => (
+                    this.props.contacts.map((contact) => (
                         <li key={contact.id}>
                             <div
                                 className='contact-avatar'
@@ -18,9 +23,9 @@ class ContactList extends Component {
                                 <p>{contact.name}</p>
                                 <p>{contact.handle}</p>
                             </div>
-                            <button className='contact-remove' onClick={() => props.onDeleteContact(contact)}>
+                            <button className='contact-remove' onClick={() => this.props.onDeleteContact(contact)}>
                                 Remove
-                    </button>
+                            </button>
                         </li>
                     ))
                 }
